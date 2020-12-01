@@ -1,0 +1,61 @@
+.banner {
+width: 1600px;
+height: 392px;
+background: #000000;
+opacity: 0.3;
+background-image: url(/images/banner\ image.jpg);
+}
+
+.titlebanner {
+width: 566px;
+height: 42px;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 42px;
+color: #FFFFFF;
+}
+
+.btn{
+left: 24.23%;
+right: 24.62%;
+top: 33.33%;
+bottom: 32.1%;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+color: #FFFFFF;
+}
+
+.title {
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+color: #000000;
+}
+
+.author{
+font-style: italic;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+color: #000000;
+}
+
+.books {
+ display: flex;
+ flex-wrap: wrap;
+}
+ 
+.book {
+    width: 20%;
+    /* box-sizing: border-box; */
+    margin: 0 20px;
+}
+
+
+
