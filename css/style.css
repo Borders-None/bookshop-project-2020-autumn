@@ -25,7 +25,7 @@
             /* Image section styling */
         
         .img-section{
-            background: url(/images/banner\ image.jpg) no-repeat ;
+            background: url('images/banner-image.jpg') no-repeat ;
             background-size: cover;
             height:400px;
             display: flex;
