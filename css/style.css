@@ -25,8 +25,7 @@ header h1 {
 
 div#banner {
   height: 400px;
-  background: olivedrab;
-  background-image: url("");
+  background-image: url("/images/banner-image.jpg") no-repeat fixed center;
 
 /* #banner:before {
   content: '';
