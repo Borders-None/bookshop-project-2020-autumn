@@ -1,4 +1,4 @@
-/* Desktop-first design based on the Homework requirements - starting with Ultra-Wide screens */
+/* Mobile-first redesign - and Media query for Homework requirements of Desktop */
 
 * {
   margin: 0;
@@ -12,105 +12,130 @@ body {
 }
 
 .container {
-  width: 1400px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  padding: 25px 0 15px;
-}
-
-header h1 {
-  font-family: "Vollkorn", serif;
-  font-weight: 500;
-  font-size: 2em;
-}
-
-.banner {
-  width: 1600px;
-  color: #fff;
-  position: relative;
-  margin: 0 auto;
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1600px;
-  height: 392px;
-  background: url("../images/banner-image.jpg") no-repeat top center;
-  -webkit-filter: brightness(0.7);
-  filter: brightness(0.7);
-  z-index: -1;
-}
-
-.banner-text {
-  padding: 5%;
-  width: 1400px;
-}
-
-.banner-text h1 {
-  font-size: 2em;
-  font-weight: 400;
-  margin-bottom: 40px;
-  margin-top: 60px;
-}
-
-.banner-text button {
-  background-color: transparent;
-  border: 2px solid #fff;
-  padding: 8px 40px;
-  color: #fff;
-  font-size: 1.1em;
-  text-transform: uppercase;
-}
-
-main {
-  margin-top: 140px;
-}
-
-.books {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  column-gap: 10%;
-  row-gap: 20%;
-}
-
-.book {
-  height: fit-content;
-}
-
-.book .title {
-  font-size: 1.1em;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.book .author {
-  font-size: 1.1em;
-  font-weight: 400;
+  display: flex;
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1600px) {
-  /* for wide screens */
-}
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .container {
+    min-width: 320px;
+  }
 
-@media (max-width: 1250px) {
-  /* for landscape tablets, laptops, and desktops */
-}
+  header {
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+  }
 
-@media (max-width: 800px) {
-  /* for tablets, portrait iPad, e-readers */
+  header h1 {
+    font-family: "Vollkorn", serif;
+    font-weight: 500;
+    font-size: 1.7em;
+    text-align: center;
+  }
 }
-
-@media (max-width: 600px) {
-  /* for landscape smartphones, landscape iPhone */
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 }
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 
-@media (max-width: 480px) {
-  /* for portrait smartphones, portrait iPhone */
+  .container {
+    width: 1400px;
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 25px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header h1 {
+    font-family: "Vollkorn", serif;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  .banner {
+    width: 1600px;
+    color: #fff;
+    position: relative;
+    margin: 0 auto 120px;
+  }
+
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1600px;
+    height: 392px;
+    background: url("../images/banner-image.jpg") no-repeat top center;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+
+  .banner-text {
+    padding: 5% 0;
+    width: 1400px;
+    height: 300px;
+  }
+
+  .banner-text h1 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 60px;
+  }
+
+  .banner-text button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 8px 40px;
+    color: #fff;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+
+  .books {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10%;
+    row-gap: 20%;
+  }
+
+  .book {
+    height: fit-content;
+  }
+
+  .book .title {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .book .author {
+    font-size: 1.1em;
+    font-weight: 400;
+  }
 }
