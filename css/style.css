@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -60,4 +60,31 @@ header h1 {
   border: 2px solid #fff;
   padding: 7px 30px;
   color: #fff;
+}
+
+main {
+  margin-top: 200px;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 20%;
+}
+
+.book {
+  height: fit-content;
+}
+
+.book .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.book .author {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
