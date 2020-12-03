@@ -1,15 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 .container {
-  width: 1200px;
+  width: 1400px;
   margin: 0 auto;
 }
 
@@ -23,13 +24,40 @@ header h1 {
   font-size: 2em;
 }
 
-div#banner {
-  height: 400px;
-  background-image: url("/images/banner-image.jpg") no-repeat fixed center;
+.banner {
+  width: 1600px;
+  color: #fff;
+  position: relative;
+  margin: 0 auto;
+}
 
-/* #banner:before {
-  content: '';
-  background: rgba(1, 13, 42, 0.5);
-  height: 400px;
-  width: 100%;
-} */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 392px;
+  background: url("../images/banner-image.jpg") no-repeat top center;
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.banner-text {
+  padding: 100px;
+  width: 1400px;
+}
+
+.banner-text h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.banner-text button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 7px 30px;
+  color: #fff;
+}
