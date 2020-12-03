@@ -20,7 +20,7 @@
 
 /* Banner styling */
 .banner{
-    background:url("/images/banner-image.jpg") no-repeat;
+    background:url('/images/banner-image.jpg') no-repeat;
     background-size: cover;
     width:100%;
     height:400px;
