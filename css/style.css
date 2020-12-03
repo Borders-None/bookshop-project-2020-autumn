@@ -1,3 +1,5 @@
+/* Desktop-first design based on the Homework requirements - starting with Ultra-Wide screens */
+
 * {
   margin: 0;
   padding: 0;
@@ -90,4 +92,25 @@ main {
 .book .author {
   font-size: 1.1em;
   font-weight: 400;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1600px) {
+  /* for wide screens */
+}
+
+@media (max-width: 1250px) {
+  /* for landscape tablets, laptops, and desktops */
+}
+
+@media (max-width: 800px) {
+  /* for tablets, portrait iPad, e-readers */
+}
+
+@media (max-width: 600px) {
+  /* for landscape smartphones, landscape iPhone */
+}
+
+@media (max-width: 480px) {
+  /* for portrait smartphones, portrait iPhone */
 }
