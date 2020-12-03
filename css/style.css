@@ -1,5 +1,3 @@
-/* Mobile-first redesign - and Media query for Homework requirements of Desktop */
-
 * {
   margin: 0;
   padding: 0;
@@ -15,19 +13,25 @@ h1 {
   font-family: "Vollkorn", serif;
   font-weight: 500;
   font-size: 2em;
+  text-align: left;
 }
 
 .container {
   margin: 0 auto;
   padding: 40px;
+  width: 1400px;
   width: 100%;
 }
 
 header {
+  padding: 25px 0 15px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner {
+  width: 1600px;
   color: #fff;
   position: relative;
   margin: 0 auto 120px;
@@ -38,7 +42,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 1600px;
   height: 392px;
   background: url("../images/banner-image.jpg") no-repeat top center;
   -webkit-filter: brightness(0.7);
@@ -48,8 +52,14 @@ header {
 
 .banner-text {
   padding: 5% 0;
-  width: 100%;
+  width: 1400px;
   height: 300px;
+}
+.banner-text h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
 .banner-text h1 {
@@ -70,10 +80,10 @@ header {
 
 .books {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   column-gap: 10%;
-  row-gap: 10%;
+  row-gap: 20%;
 }
 
 .book {
@@ -89,136 +99,5 @@ header {
 .book .author {
   font-size: 1.1em;
   font-weight: 400;
-}
-
-/* MEDIA QUERIES */
-@media (min-width: 320px) {
-  /* smartphones, iPhone, portrait 480x320 phones */
-
-  header {
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-  }
-
-  header h1 {
-    font-weight: 500;
-    font-size: 1.7em;
-    text-align: center;
-  }
-}
-@media (min-width: 481px) {
-  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  .books {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 10%;
-    row-gap: 10%;
-  }
-}
-@media (min-width: 641px) {
-  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  .books {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 10%;
-    row-gap: 10%;
-  }
-}
-@media (min-width: 961px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-  .books {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 10%;
-    row-gap: 10%;
-  }
-}
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-  .books {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 10%;
-    row-gap: 10%;
-  }
-}
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
-
-  .container {
-    width: 1400px;
-    margin: 0 auto;
-  }
-
-  header {
-    padding: 25px 0 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header h1 {
-    text-align: left;
-  }
-
-  .banner {
-    width: 1600px;
-    color: #fff;
-    position: relative;
-    margin: 0 auto 120px;
-  }
-
-  .banner::before {
-    width: 1600px;
-  }
-
-  .banner-text {
-    padding: 5% 0;
-    width: 1400px;
-    height: 300px;
-  }
-
-  .banner-text h1 {
-    font-size: 2em;
-    font-weight: 400;
-    margin-bottom: 40px;
-    margin-top: 60px;
-  }
-
-  .banner-text button {
-    background-color: transparent;
-    border: 2px solid #fff;
-    padding: 8px 40px;
-    color: #fff;
-    font-size: 1.1em;
-    text-transform: uppercase;
-  }
-
-  .books {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 10%;
-    row-gap: 20%;
-  }
-
-  .book {
-    height: fit-content;
-  }
-
-  .book .title {
-    font-size: 1.1em;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .book .author {
-    font-size: 1.1em;
-    font-weight: 400;
-  }
+  font-style: italic;
 }
