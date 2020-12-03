@@ -1,61 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Vollkorn", serif;
+  font-weight: 500;
+  font-size: 2em;
+  text-align: left;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 1400px;
+}
+
+header {
+  padding: 25px 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .banner {
-width: 1600px;
-height: 392px;
-background: #000000;
-opacity: 0.3;
-background-image: url(/images/banner\ image.jpg);
+  width: 1600px;
+  color: #fff;
+  position: relative;
+  margin: 0 auto 120px;
 }
 
-.titlebanner {
-width: 566px;
-height: 42px;
-font-style: normal;
-font-weight: 500;
-font-size: 36px;
-line-height: 42px;
-color: #FFFFFF;
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 392px;
+  background: url("../images/banner-image.jpg") no-repeat top center;
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+  z-index: -1;
 }
 
-.btn{
-left: 24.23%;
-right: 24.62%;
-top: 33.33%;
-bottom: 32.1%;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-color: #FFFFFF;
+.banner-text {
+  padding: 5% 0;
+  width: 1400px;
+  height: 300px;
+}
+.banner-text h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
-.title {
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-color: #000000;
+.banner-text h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
-.author{
-font-style: italic;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
-color: #000000;
+.banner-text button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 8px 40px;
+  color: #fff;
+  font-size: 1.1em;
+  text-transform: uppercase;
 }
 
 .books {
- display: flex;
- flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 20%;
 }
- 
+
 .book {
-    width: 20%;
-    /* box-sizing: border-box; */
-    margin: 0 20px;
+  height: fit-content;
 }
 
+.book .title {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
-
+.book .author {
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: italic;
+}
