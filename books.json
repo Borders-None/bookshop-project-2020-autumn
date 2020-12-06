@@ -1,0 +1,207 @@
+[
+    {
+     "id" : 1,  
+     "title" : "The Great Gatsby",   
+    
+    
+    "author": {
+        "id": 1,
+        "firstName" : "Scott",
+        "lastName" : "Fitzgerald"
+    }
+    },
+    
+    {
+      "id" : 2,
+      "title" : "The Sound and the Fury",  
+    
+      "author": {
+        "id": 2,
+        "firstName" : "William",
+        "lastName" : "Faulkner"
+        
+      }
+    },
+    
+    
+    {
+      "id" : 3,
+      "title" : "The Name of the Rose",
+    
+      "author":{
+          "id" :3 ,
+          "firstName" : "Umberto",
+          "lastName" : "Eco"
+      }
+      
+    },
+    
+    
+    {
+        "id" :4,
+        "title" : "The Magic Mountain",
+      
+        "author":{
+            "id" : 4,
+            "firstName" : "Thomas",
+            "lastName" : "Mann"
+        }
+        
+      },
+    
+    
+      {
+        "id" :5,
+        "title" : "In Search of Lost Time",
+      
+        "author":{
+            "id" :5 ,
+            "firstName" : "Marcel",
+            "lastName" : "Proust"
+        }
+        
+      },
+    
+    
+      {
+        "id" :6,
+        "title" : "To the Lighthouse",
+      
+        "author":{
+            "id" : 6,
+            "firstName" : "Virginia",
+            "lastName" : "Woolf"
+        }
+        
+      },
+    
+    
+      {
+        "id" :7,
+        "title" : "Nineteen Eighty-Four",
+      
+        "author":{
+            "id" : 7,
+            "firstName" : "George",
+            "lastName" : "Orwell"
+        }
+        
+      },
+    
+    
+      {
+        "id" :8,
+        "title" : "The Hound of the Baskervilles",
+      
+        "author":{
+            "id" : 8,
+            "firstName" : "Arthur Conan",
+            "lastName" : "Doyle"
+        }
+        
+      },
+    
+    
+      {
+        "id" :9,
+        "title" : "Ulysses",
+      
+        "author":{
+            "id" :9 ,
+            "firstName" : "James",
+            "lastName" : "Joyce"
+        }
+        
+      },
+    
+    
+      {
+        "id" :10,
+        "title" : "The Little Prince",
+      
+        "author":{
+            "id" :10 ,
+            "firstName" : "Antoine",
+            "lastName" : "de Saint-Exupéry"
+        }
+        
+      },
+    
+    
+      {
+        "id" :11,
+        "title" : "The Name of the Rose",
+      
+        "author":{
+            "id" :11 ,
+            "firstName" : "Umberto",
+            "lastName" : "Eco"
+        }
+        
+      },
+    
+    
+      {
+        "id" :12,
+        "title" : "The War of the Worlds",
+      
+        "author":{
+            "id" :12 ,
+            "firstName" : "H.G.",
+            "lastName" : "Wells"
+        }
+        
+      },
+    
+      {
+        "id" :13,
+        "title" : "One Hundred Years of Solitude",
+      
+        "author":{
+            "id" :13 ,
+            "firstName" : "Gabriel ",
+            "lastName" : "García Márquez"
+        }
+        
+      },
+    
+    
+      {
+        "id" :14,
+        "title" : "Waiting for Godot",
+      
+        "author":{
+            "id" :14 ,
+            "firstName" : "Samuel",
+            "lastName" : "Beckett"
+        }
+        
+      },
+    
+      {
+        "id" :15,
+        "title" : "Gone with the Wind",
+      
+        "author":{
+            "id" :15 ,
+            "firstName" : "Margaret",
+            "lastName" : "Mitchell"
+        }
+        
+      },
+    
+      {
+        "id" :16,
+        "title" : "Friday",
+      
+        "author":{
+            "id" :16 ,
+            "firstName" : "Michel",
+            "lastName" : "Tournier"
+        }
+         
+      }
+    
+      
+      
+    ]
