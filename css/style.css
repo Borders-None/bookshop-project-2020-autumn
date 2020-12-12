@@ -154,6 +154,20 @@ main {
   width: 200px;
 }
 
+.book .btn-details {
+  padding: 10px;
+  background: gray;
+  border: 3px solid saddlebrown;
+  border-radius: 5px;
+  margin: 0.5rem 0 0 0;
+}
+
+.btn-details a {
+  color: white;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
 /* Footer styling */
 footer {
   height: 50px;
@@ -179,7 +193,7 @@ footer {
   }
 
   main {
-    height: 2600px;
+    height: 2500px;
   }
   .books {
     grid-template-columns: repeat(3, 1fr);
@@ -197,7 +211,7 @@ footer {
   }
 
   main {
-    height: 3400px;
+    height: 3300px;
   }
   .books {
     grid-template-columns: repeat(2, 1fr);
@@ -213,7 +227,7 @@ footer {
     font-size: 1.5em;
   }
   main {
-    height: 6700px;
+    height: 6500px;
   }
   .books {
     display: flex;
