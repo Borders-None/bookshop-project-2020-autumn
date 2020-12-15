@@ -15,6 +15,10 @@ h1 {
   font-size: 2em;
   text-align: left;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 /* Header Styling */
 
@@ -75,26 +79,28 @@ header .container {
   background-color: transparent;
   border: 2px solid #fff;
   padding: 8px 40px;
+}
+
+.banner-text button a {
   color: #fff;
   font-size: 1.1em;
   text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.banner-text button:focus {
+  outline: none;
 }
 
+.banner-text button:hover {
+  opacity: 0.6;
+}
 /* Headers for Books  */
 #book-header {
   text-align: center;
   border-bottom: 3px solid black;
   padding-bottom: 1rem;
-}
-
-#book-text {
-  display: inline-block;
-  margin: 2rem 0 3rem 3rem;
-  color: crimson;
-  background: gainsboro;
-  width: 250px;
-  text-align: center;
-  transition: all 1s;
+  color: cadetblue;
 }
 
 #btn {
@@ -117,7 +123,7 @@ header .container {
 
 /* Books Styling */
 main {
-  height: 500px;
+  height: 1700px;
   margin: 3rem 0 0 2rem;
 }
 
@@ -129,11 +135,11 @@ main {
   justify-items: center;
 }
 .book {
-  width: 200px;
+  width: 220px;
 }
 
 .book .title {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -142,6 +148,36 @@ main {
   font-size: 1.1em;
   font-weight: 400;
   font-style: italic;
+  margin-bottom: 10px;
+}
+
+.book .book-cover {
+  height: 300px;
+  width: 200px;
+}
+
+.book .btn-details {
+  padding: 10px;
+  background: gray;
+  border: 3px solid saddlebrown;
+  border-radius: 5px;
+  margin: 0.5rem 0 0 0;
+}
+
+.btn-details a {
+  color: white;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Footer styling */
+footer {
+  height: 50px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Media Queries */
@@ -159,7 +195,7 @@ main {
   }
 
   main {
-    height: 750px;
+    height: 2500px;
   }
   .books {
     grid-template-columns: repeat(3, 1fr);
@@ -177,7 +213,7 @@ main {
   }
 
   main {
-    height: 950px;
+    height: 3300px;
   }
   .books {
     grid-template-columns: repeat(2, 1fr);
@@ -193,7 +229,7 @@ main {
     font-size: 1.5em;
   }
   main {
-    height: 1650px;
+    height: 6500px;
   }
   .books {
     display: flex;
