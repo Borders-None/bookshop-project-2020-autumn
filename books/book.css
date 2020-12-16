@@ -41,7 +41,7 @@ header .container h1 {
 /* main-content styling */
 
 .main-content {
-  height: 500px;
+  height: 550px;
   line-height: 2;
   margin-bottom: 2rem;
 }
@@ -99,21 +99,24 @@ p {
   border-radius: 10px;
   height: 40px;
   width: 300px;
-
   font-weight: 600;
   font-size: 15px;
+  border: none;
+}
+.book-purchase .buy {
+  background-color: cornflowerblue;
+  color: white;
 }
 .book-purchase .basket {
-  background-color: cornflowerblue;
-  border: none;
+  background: lightslategray;
   margin: 1rem 0 0.5rem 0;
   color: gold;
 }
 .book-purchase .wishlist {
-  border: none;
   background-color: white;
   color: #876d66;
 }
+
 /* Footer styling */
 footer {
   height: 50px;
