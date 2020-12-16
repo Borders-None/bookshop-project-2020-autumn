@@ -1,0 +1,171 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Vollkorn", serif;
+  font-weight: 500;
+  font-size: 2em;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 90%;
+}
+
+/* main styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  margin-bottom: 2rem;
+  color: white;
+  line-height: 2;
+}
+
+main::before {
+  content: "";
+  background: url("https://images2.alphacoders.com/261/thumb-1920-26102.jpg")
+    no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  opacity: 0.9;
+  z-index: -1;
+}
+main .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+main .info h2:first-child {
+  color: crimson;
+  font-size: 30px;
+  border-bottom: 2px solid;
+}
+
+main .special {
+  color: goldenrod;
+  margin-top: 1rem;
+  border-bottom: 2px solid;
+}
+
+/* news styles */
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  text-align: center;
+  height: 300px;
+  line-height: 2;
+  color: grey;
+  padding: 0 2rem;
+}
+
+.news input {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  margin: 1rem 0;
+  background: lavender;
+  font-weight: 600;
+
+  color: lightslategray;
+}
+
+.news input:focus {
+  outline: none;
+  border-color: crimson;
+}
+
+.news button {
+  background: lavender;
+  color: lightslategray;
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+}
+.news button:focus {
+  outline: none;
+  border-color: green;
+}
+/* Footer styling */
+footer {
+  height: 50px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media queries */
+
+@media (max-width: 900px) {
+  main .info {
+    width: 90%;
+    margin: auto;
+  }
+  .news {
+    height: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    height: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    height: 900px;
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    height: 1000px;
+  }
+
+  .news input {
+    width: 180px;
+  }
+  .news button {
+    width: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  main {
+    height: 1100px;
+  }
+  .news {
+    height: 550px;
+  }
+}
