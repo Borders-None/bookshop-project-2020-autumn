@@ -1,0 +1,70 @@
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+  
+h1 {
+    font-family: "Vollkorn", serif;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: left;
+    }
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    margin: 0 auto;
+    /* padding: 40px 0; */
+    width: 90%;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+form {
+    width: 600px;
+    margin: 200px auto; 
+    border: dotted #797979;      
+}
+
+div {
+    width: 100%;
+    margin: 15px auto;
+}
+
+label {
+    margin-left: 160px;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+}
+
+input {
+
+    width: 50%;
+    display: block;
+    border: 1px solid #797979;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button {
+    margin: 0;
+    padding: 8px;
+    width: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 240px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+    background: linear-gradient(90deg, rgb(119, 112, 16), rgb(65, 57, 1));
+}
+span {
+    display: block;
+    color: red;
+    font-style: italic;
+}
