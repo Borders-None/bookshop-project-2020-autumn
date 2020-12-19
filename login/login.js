@@ -3,7 +3,7 @@ const form = document.querySelector("form");
 const a = document.querySelector(".a-sign-in");
 signInBtn.addEventListener("click", signInValidation);
 
-function signInValidation() {
+function signInValidation(e) {
   const userName = document.querySelector("[type = text]");
   const password = document.querySelector("[type = password]");
   console.log(password);
@@ -15,13 +15,14 @@ function signInValidation() {
     errorMsgPassword(password);
   } else {
     fetchingAndStoringData(userName, password);
-    window.open("/index.html", "_self");
+    window.open("../index.html", "_self");
   }
   // Clearing inputs after button is clicked //
   let allInputs = document.querySelectorAll("input");
   allInputs.forEach(function (input) {
     input.value = "";
   });
+  e.preventDefault();
 }
 
 function inputsEmpty(userName, password) {
