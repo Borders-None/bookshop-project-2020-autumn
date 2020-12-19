@@ -25,11 +25,51 @@ header {
 }
 
 header .container {
-  margin: 0 auto;
-  padding: 40px 0;
   width: 90%;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+header .login {
+  display: flex;
+  background: grey;
+  padding: 5px;
+}
+
+.login button {
+  color: whitesmoke;
+  margin: 0 1rem;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.login-btn i {
+  color: whitesmoke;
+}
+.login-btn a {
+  color: whitesmoke;
+}
+
+.username {
+  display: none;
+  min-width: 70px;
+}
+
+.username i {
+  margin-left: 5px;
+}
+
+.sign-out {
+  display: none;
+  font-size: 12px !important;
+}
+.sign-out i {
+  margin-left: 5px;
+}
 /* main styles */
 
 main {
@@ -123,6 +163,16 @@ footer {
   align-items: center;
   justify-content: center;
 }
+footer h5,
+.icons {
+  margin: 0 10px;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+}
 
 /* Media queries */
 
@@ -143,8 +193,26 @@ footer {
 }
 
 @media (max-width: 600px) {
+  header .login {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    height: 60px;
+    padding: 0;
+  }
+
+  .login button {
+    font-size: 15px;
+  }
   main {
     height: 900px;
+  }
+  footer {
+    height: 100px;
+    flex-direction: column;
+  }
+
+  footer .icons {
+    margin-top: 1rem;
   }
 }
 
