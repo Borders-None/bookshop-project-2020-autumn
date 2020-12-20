@@ -1,0 +1,202 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Header styling  */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 90%;
+}
+
+header .container h1 {
+  font-family: "Vollkorn", serif;
+  font-weight: 500;
+  font-size: 2em;
+  text-align: left;
+}
+
+/* main-content styling */
+
+.main-content {
+  height: 500px;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.main-content .book {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  background-color: #ededef;
+}
+.book div {
+  margin-top: 1rem;
+}
+.book-cover-div {
+  justify-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.book-cover-div .book-cover {
+  height: 400px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.book-info {
+  grid-column: 2/3;
+}
+.book-info .title {
+  color: darkslateblue;
+}
+
+.book-purchase {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-purchase h2 {
+  color: cornflowerblue;
+}
+.book-purchase,
+h4,
+p {
+  margin: 1rem 0;
+}
+
+.book-purchase p i {
+  font-size: 15px;
+}
+.book-purchase button {
+  border-radius: 10px;
+  height: 40px;
+  width: 300px;
+
+  font-weight: 600;
+  font-size: 15px;
+}
+.book-purchase .basket {
+  background-color: cornflowerblue;
+  border: none;
+  margin: 1rem 0 0.5rem 0;
+  color: gold;
+}
+.book-purchase .wishlist {
+  border: none;
+  background-color: white;
+  color: #876d66;
+}
+/* Footer styling */
+footer {
+  height: 50px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .main-content {
+    height: 800px;
+  }
+  .main-content .book {
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+  .book div {
+    margin-top: 3rem;
+  }
+  .book-cover-div {
+    margin-left: 2rem;
+    justify-self: start;
+  }
+  .book-info {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    height: 1200px;
+  }
+  .main-content .book {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book-purchase {
+    margin-left: 2rem;
+  }
+
+  .book-purchase button {
+    width: 100%;
+    position: relative;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    height: 1250px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-content {
+    height: 1300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-content {
+    height: 1350px;
+  }
+
+  .book-cover-div .book-cover {
+    width: 80%;
+  }
+}
+
+@media (max-width: 350px) {
+  .main-content {
+    height: 1400px;
+  }
+
+  .book-cover-div .book-cover {
+    width: 90%;
+  }
+}

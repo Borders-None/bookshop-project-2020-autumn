@@ -1,7 +1,7 @@
+/* General Styling */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -15,25 +15,31 @@ h1 {
   font-size: 2em;
   text-align: left;
 }
-
-.container {
-  margin: 0 auto;
-  padding: 40px;
-  width: 1400px;
+a {
+  text-decoration: none;
+  color: black;
 }
 
+/* Header Styling */
+
 header {
-  padding: 25px 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+header .container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 90%;
+}
+
+/* Banner Styling */
 .banner {
-  width: 1600px;
   color: #fff;
   position: relative;
-  margin: 0 auto 120px;
+  margin-bottom: 4rem;
+  height: 400px;
 }
 
 .banner::before {
@@ -41,24 +47,25 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1600px;
-  height: 392px;
-  background: url("../images/banner-image.jpg") no-repeat top center;
+  width: 100%;
+  height: 100%;
+  background: url("../images/banner-image.jpg") no-repeat;
+  background-position-x: center;
+  background-size: cover;
   -webkit-filter: brightness(0.7);
   filter: brightness(0.7);
   z-index: -1;
 }
 
-.banner-text {
-  padding: 5% 0;
-  width: 1400px;
-  height: 300px;
+.banner .container {
+  margin: 0 0 0 4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.banner-text h1 {
-  font-size: 2em;
-  font-weight: 400;
-  margin-bottom: 40px;
-  margin-top: 60px;
+
+.banner-text {
+  margin: 0 0 3rem 0;
 }
 
 .banner-text h1 {
@@ -75,22 +82,62 @@ header {
   color: #fff;
   font-size: 1.1em;
   text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.banner-text button:focus {
+  outline: none;
+}
+
+.banner-text button:hover {
+  opacity: 0.6;
+}
+/* Headers for Books  */
+#book-header {
+  text-align: center;
+  border-bottom: 3px solid black;
+  padding-bottom: 1rem;
+  color: cadetblue;
+}
+
+#btn {
+  background: transparent;
+  height: 40px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  padding: 0 3rem;
+  color: #555;
+  margin: 2rem 0 0 4rem;
+}
+
+#btn:focus {
+  outline: none;
+}
+
+/* Books Styling */
+main {
+  height: 1700px;
+  margin: 3rem 0 0 2rem;
 }
 
 .books {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  column-gap: 10%;
-  row-gap: 20%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 3rem;
+  justify-items: center;
 }
-
 .book {
-  height: fit-content;
+  width: 220px;
 }
 
 .book .title {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -99,4 +146,102 @@ header {
   font-size: 1.1em;
   font-weight: 400;
   font-style: italic;
+  margin-bottom: 10px;
+}
+
+.book .book-cover {
+  height: 300px;
+  width: 200px;
+}
+
+.book .btn-details {
+  padding: 10px;
+  background: gray;
+  border: 3px solid saddlebrown;
+  border-radius: 5px;
+  margin: 0.5rem 0 0 0;
+}
+
+.btn-details a {
+  color: white;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Footer styling */
+footer {
+  height: 50px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .banner {
+    height: 200px;
+  }
+
+  .banner .container {
+    align-items: flex-start;
+  }
+  .banner .banner-text {
+    margin: 0;
+  }
+
+  main {
+    height: 2500px;
+  }
+  .books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    height: 200px;
+    margin-bottom: 3rem;
+  }
+
+  .banner .banner-text {
+    margin: 0;
+  }
+
+  main {
+    height: 3300px;
+  }
+  .books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .banner .container {
+    margin: 0 0 0 1rem;
+  }
+
+  .banner-text h1 {
+    font-size: 1.5em;
+  }
+  main {
+    height: 6500px;
+  }
+  .books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .banner-text h1 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+  .banner-text button {
+    font-size: 0.7em;
+  }
 }

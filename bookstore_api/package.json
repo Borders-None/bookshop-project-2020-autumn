@@ -1,0 +1,23 @@
+{
+  "name": "emails_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules\\.bin\\nodemon app.js --exec node_modules\\.bin\\babel-node --",
+    "server": "babel-node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
