@@ -1,6 +1,11 @@
 window.onload = ()=> {
+<<<<<<< Updated upstream
     this.sessionStorage.setItem("username", "api-client");
     this.sessionStorage.setItem("password", "KEV9EwC5SEvk4dF");
+=======
+    this.sessionStorage.setItem("username", '${username}');
+    this.sessionStorage.setItem("password", '${password}');
+>>>>>>> Stashed changes
 }
 
 var input = document.getElementsByTagName('input');
@@ -19,6 +24,7 @@ login.onclick = ()=>{
             document.cookie = "username"+input[0].value;
             document.cookie = "password"+input[1].value;
         }
+<<<<<<< Updated upstream
     else
         {
             if ((input[0].value != sessionStorage.getItem("username"))) 
@@ -38,6 +44,8 @@ login.onclick = ()=>{
             }        
         }
 
+=======
+>>>>>>> Stashed changes
     }
 
         else

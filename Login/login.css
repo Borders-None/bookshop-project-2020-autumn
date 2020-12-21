@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
@@ -21,6 +22,8 @@ a {
     border-bottom: 1px solid rgb(87, 87, 87);
 }
 
+=======
+>>>>>>> Stashed changes
 form {
     width: 600px;
     margin: 200px auto; 

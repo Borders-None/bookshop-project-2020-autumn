@@ -30,6 +30,23 @@ header .container {
   width: 90%;
 }
 
+
+
+header .login {
+  margin: 0 auto;
+  padding: 40px 95px 40px 0;
+  width: 90%;
+}
+
+header .login h1 {
+  font-family: "Vollkorn", serif;
+  font-weight: 500;
+  font-size: 2em;
+  text-align: right;
+}
+
+
+
 /* Banner Styling */
 .banner {
   color: #fff;
