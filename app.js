@@ -26,3 +26,15 @@ function displayBooks(data) {
   });
   allBooks.innerHTML = bookDiv;
 }
+
+// Login Form popup
+document.getElementById("btn-Form").addEventListener("click", openUserForm);
+document.getElementById("btn-close").addEventListener("click", closeUserForm);
+
+function openUserForm() {
+  document.getElementById("userForm").style.display = "block";
+}
+
+function closeUserForm() {
+  document.getElementById("userForm").style.display = "none";
+}

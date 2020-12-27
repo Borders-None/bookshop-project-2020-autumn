@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- vendors -->
+    <script
+      src="https://kit.fontawesome.com/ed0b3fb323.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap"
       rel="stylesheet"
@@ -14,33 +18,94 @@
       rel="stylesheet"
     />
 
-    <title>Coders Without Borders - Books for all!</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CWB - Books for all!</title>
   </head>
 
   <body>
     <header>
       <div class="container">
-        <h1><a href="index.html"> Books for all!</a></h1>
+        <div class="logo">
+          <h1><a href="index.html">Books for all!</a></h1>
+          <p>A Bookshop using Vanilla JavaScript</p>
+        </div>
+        <div class="login-box">
+          <button id="btn-Form">
+            Login <i class="fas fa-sign-in-alt"></i>
+          </button>
+
+          <!-- start User Form Popup -->
+          <div class="form-popup animate" id="userForm">
+            <form class="form-content">
+              <div class="avatar-container">
+                <span
+                  onclick="document.getElementById('userForm').style.display='none'"
+                  class="close-x"
+                  title="Close userForm"
+                  ><i class="fas fa-times"></i
+                ></span>
+                <img id="avatar" src="" alt="" />
+              </div>
+
+              <label for="uname">Username</label>
+              <input type="text" placeholder="Enter Username" />
+
+              <label for="password">Password</label>
+              <input type="password" placeholder="Enter Password" />
+
+              <button type="submit" id="btn-submit">Login</button>
+              <button type="button" id="btn-close">Close</button>
+            </form>
+          </div>
+          <!-- End User Form Popup -->
+        </div>
       </div>
     </header>
 
     <div class="banner">
       <div class="container">
         <div class="banner-text">
-          <h1>The home for your favourite books!</h1>
+          <h1>The home for your favorite books!</h1>
           <button class="btn">
-            <a href="about-us/read-more.html"> READ MORE</a>
+            <a href="about-us.html">About Us</a>
           </button>
         </div>
       </div>
     </div>
 
     <main>
-      <div class="books"></div>
+      <div class="container">
+        <div class="books"></div>
+      </div>
     </main>
 
     <footer>
-      <h5>&copy; 2020 Books For All, All Rights Reserved</h5>
+      <div class="container">
+        <div class="organizers">
+          <a href="https://www.bordersnone.com/coders-without-borders/"
+            ><img src="images/bordersnone.png" alt=""
+          /></a>
+          <img src="images/cwb.png" alt="" />
+          <ul>
+            <h5>Books for all!</h5>
+            <h6>A Project by CWB JS Advanced Course 2020 Students:</h6>
+            <li>Ahmed Eldemashqi</li>
+            <li>Hany Afifi</li>
+            <li>Pourija Husseini</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-banner">
+        <p>&copy;2020 BORDERS:NONE - All Rights Reserved</p>
+        <div class="social">
+          <a href="https://www.facebook.com/bordersnone/"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/bordersnone/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
     </footer>
 
     <script src="app.js"></script>
