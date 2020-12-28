@@ -95,9 +95,6 @@ button:focus {
 }
 
 .close-x {
-  position: absolute;
-  right: 25px;
-  top: 0;
   color: #0a597e;
   font-size: 35px;
   font-weight: bold;
@@ -106,6 +103,10 @@ button:focus {
 .close-x:focus {
   color: red;
   cursor: pointer;
+}
+
+.close-x i {
+  margin: 50px;
 }
 
 input[type="text"],

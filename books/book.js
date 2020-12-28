@@ -20,7 +20,7 @@ function displayBook(book) {
 
   // Getting values of online API and adding them to the UI
   const title = ` <h2 class = 'title' > ${book.title} </h2>`;
-  const author = `<h5 class = 'author'> By (author)  ${book.author.first_name} ${book.author.last_name}</h5> `;
+  const author = `<h5 class = 'author'> By:  ${book.author.first_name} ${book.author.last_name}</h5> `;
   const bookYear = `<h5 class = 'book-year'> Originally published: ${book.year} </h5>`;
   const topic = `<h5 class = 'topic'> Topic: ${book.topics[0].name} </h5>`;
   const synopsis = `<p class = 'synopsis'> ${book.synopsis} </p> `;
@@ -36,4 +36,5 @@ function displayBook(book) {
   currentBook = `<div class = 'book'>${bookInfoDiv} ${bookCoverDiv}  ${bookPurchase}</div>`;
 
   main.innerHTML = currentBook;
+  document.title = book.title + " - " + "CWB - Books for all!";
 }
