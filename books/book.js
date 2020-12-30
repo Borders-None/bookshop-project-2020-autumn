@@ -1,7 +1,7 @@
 let currentUrl = new URL(location.href); // creating new url that contains current url
 let searchParams = new URLSearchParams(currentUrl.search); //  searching in current  url params
-let bookId = searchParams.get("id"); //  getting current url id// Fetching book when page is loaded
-window.addEventListener("DomContentLoaded", getBook());
+let bookId = searchParams.get('id'); //  getting current url id// Fetching book when page is loaded
+window.addEventListener('DomContentLoaded', getBook());
 
 function getBook() {
   fetch(`https://bookshop-api.mirkwood.dev/books/${bookId}`)
@@ -15,8 +15,8 @@ function getBook() {
 }
 
 function displayBook(book) {
-  let main = document.querySelector("main"); // html main element
-  let currentBook = "";
+  let main = document.querySelector('main'); // html main element
+  let currentBook = '';
 
   // Getting values of online API and adding them to the UI
   const title = ` <h2 class = 'title' > ${book.title} </h2>`;
@@ -36,5 +36,5 @@ function displayBook(book) {
   currentBook = `<div class = 'book'>${bookInfoDiv} ${bookCoverDiv}  ${bookPurchase}</div>`;
 
   main.innerHTML = currentBook;
-  document.title = book.title + " - " + "CWB - Books for all!";
+  document.title = book.title + ' :: ' + 'CWB Books for all!';
 }
