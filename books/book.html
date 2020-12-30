@@ -28,36 +28,50 @@
           <h1><a href="../index.html">Books for all!</a></h1>
           <p>A Bookshop using Vanilla JavaScript</p>
         </div>
-        <div class="login-box">
+        <div id="login-box">
+          <div id="user-box">
+            <i class="fas fa-user" id="user-icon"></i>
+            <span id="user-show"></span>
+          </div>
           <button id="btn-Form">
             Login <i class="fas fa-sign-in-alt"></i>
           </button>
-
-          <!-- start User Form Popup -->
-          <div class="form-popup animate" id="userForm">
-            <form class="form-content">
-              <div class="avatar-container">
-                <span
-                  onclick="document.getElementById('userForm').style.display='none'"
-                  class="close-x"
-                  title="Close userForm"
-                  ><i class="fas fa-times"></i
-                ></span>
-                <img id="avatar" src="" alt="" />
-              </div>
-
-              <label for="uname">Username</label>
-              <input type="text" placeholder="Enter Username" />
-
-              <label for="password">Password</label>
-              <input type="password" placeholder="Enter Password" />
-
-              <button type="submit" id="btn-submit">Login</button>
-              <button type="button" id="btn-close">Close</button>
-            </form>
-          </div>
-          <!-- End User Form Popup -->
         </div>
+
+        <!-- start User Form Popup -->
+        <div class="form-popup" id="form-popup">
+          <form class="form-content" id="login-form">
+            <div class="avatar-container">
+              <span id="popup-close-x"><i class="fas fa-times"></i></span>
+              <img id="avatar" src="" alt="" />
+            </div>
+
+            <label for="uname">Username</label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              id="uname"
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="psw"
+              required
+            />
+            <div id="error-msg"></div>
+            <div id="bttns">
+              <button type="submit" id="btn-submit">Login</button>
+              <button type="button" id="login-page-btn">
+                <a href="login/login.html">Create Account</a>
+              </button>
+              <button type="button" id="popup-close-btn">Close</button>
+            </div>
+          </form>
+        </div>
+        <!-- End User Form Popup -->
       </div>
     </header>
 

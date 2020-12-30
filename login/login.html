@@ -3,11 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!--Vendors  -->
+    <script
+      src="https://kit.fontawesome.com/ed0b3fb323.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styling -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="login.css" />
-
-    <title>Document</title>
+    <link rel="stylesheet" href="book.css" />
+    <title>CWB - Books for all!</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1><a href="../index.html">Books for all!</a></h1>
+          <p>A Bookshop using Vanilla JavaScript</p>
+        </div>
+        <div id="login-box">
+          <div id="user-box">
+            <i class="fas fa-user" id="user-icon"></i>
+            <span id="user-show"></span>
+          </div>
+          <button id="btn-Form">
+            Login <i class="fas fa-sign-in-alt"></i>
+          </button>
+        </div>
+
+        <!-- start User Form Popup -->
+        <div class="form-popup" id="form-popup">
+          <form class="form-content" id="login-form">
+            <div class="avatar-container">
+              <span id="popup-close-x"><i class="fas fa-times"></i></span>
+              <img id="avatar" src="" alt="" />
+            </div>
+
+            <label for="uname">Username</label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              id="uname"
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="psw"
+              required
+            />
+            <div id="error-msg"></div>
+            <div id="bttns">
+              <button type="submit" id="btn-submit">Login</button>
+              <button type="button" id="login-page-btn">
+                <a href="login/login.html">Create Account</a>
+              </button>
+              <button type="button" id="popup-close-btn">Close</button>
+            </div>
+          </form>
+        </div>
+        <!-- End User Form Popup -->
+      </div>
+    </header>
+
+    <main class="main-content"></main>
+
+    <footer>
+      <div class="container">
+        <div class="organizers">
+          <a href="https://www.bordersnone.com/coders-without-borders/"
+            ><img src="../images/bordersnone.png" alt=""
+          /></a>
+          <img src="../images/cwb.png" alt="" />
+          <ul>
+            <h5>Books for all!</h5>
+            <h6>A Project by CWB JS Advanced Course 2020 Students:</h6>
+            <li>Ahmad Alkaati</li>
+            <li>Hany Afifi</li>
+            <li>Pouriya Hoseiny</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-banner">
+        <p>&copy;2020 BORDERS:NONE - All Rights Reserved</p>
+        <div class="social">
+          <a href="https://www.facebook.com/bordersnone/"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/bordersnone/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="book.js"></script>
+  </body>
 </html>
