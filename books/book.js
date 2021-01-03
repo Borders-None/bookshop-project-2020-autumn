@@ -13,7 +13,7 @@ function getBook() {
       displayBook(book);
     });
 }
-
+ 
 function displayBook(book) {
   let main = document.querySelector("main"); // html main element
   let currentBook = "";
@@ -24,7 +24,7 @@ function displayBook(book) {
   const bookYear = `<h5 class = 'book-year'> Originally published: ${book.year} </h5>`;
   const topic = `<h5 class = 'topic'> Topic: ${book.topics[0].name} </h5>`;
   const synopsis = `<p class = 'synopsis'> ${book.synopsis} </p> `;
-  const bookPrice = `<h2> ${book.price} € </h2>`;
+  const bookPrice = `<h2> <span id="price">${book.price}</span> € </h2>`;
   const bookPurchaseH3 = `<h3> Free delivery worldwide</h3>`;
   const bookPurchaseP = `  <p> <i class="far fa-check-circle"></i> Available. Dispatched from Australia in 3  business  days. </p>`;
   const buttonBuy = `<button class= 'buy'> Buy Now </button>`;
@@ -37,3 +37,34 @@ function displayBook(book) {
 
   main.innerHTML = currentBook;
 }
+
+
+function purchaseBook() {
+  const purchase = {
+    total_price: 41,
+    date: "2020-12-13",
+    books: [bookId],
+};
+const username = sessionStorage.getItem("username")
+const password = sessionStorage.getItem("password")
+
+
+
+  fetch(`https://bookshop-api.mirkwood.dev/purchases/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json", // A Content-Type header
+      "Authorization": `Basic ${base64EncodedString}`, // <-------- added authorization to the protected purchases endpoint
+    },
+    body: JSON.stringify(purchase),
+  })
+    .then((res) => {
+      return res.json();
+    })
+
+    .then((book) => {
+      displayBook(book);
+    });
+}
+
+
