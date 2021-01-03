@@ -19,6 +19,7 @@
     />
     <!-- Styling -->
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Login :: CWB Books for all!</title>
   </head>
 
@@ -31,48 +32,18 @@
         </div>
         <div id="login-box">
           <div id="user-box">
-            <i class="fas fa-user" id="user-icon"></i>
+            <i id="user-icon" class="fas fa-user"></i>
             <span id="user-show"></span>
           </div>
-          <button id="btn-Form">
-            Sign In <i class="fas fa-sign-in-alt"></i>
+          <button id="btn-signin">
+            <a href="login/login.html"
+              >Sign In <i class="fas fa-sign-in-alt"></i
+            ></a>
+          </button>
+          <button id="btn-signout">
+            Sign Out <i class="fas fa-sign-out-alt"></i>
           </button>
         </div>
-
-        <!-- start User Form Popup -->
-        <div class="form-popup" id="form-popup">
-          <form class="form-content" id="login-form">
-            <div class="avatar-container">
-              <span id="popup-close-x"><i class="fas fa-times"></i></span>
-              <img id="avatar" src="" alt="" />
-            </div>
-
-            <label for="uname">Username</label>
-            <input
-              type="text"
-              placeholder="Enter Username"
-              id="uname"
-              required
-            />
-
-            <label for="password">Password</label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              id="psw"
-              required
-            />
-            <div id="error-msg"></div>
-            <div id="bttns">
-              <button type="submit" id="btn-submit">Login</button>
-              <button type="button" id="login-page-btn">
-                <a href="login/login.html">Create Account</a>
-              </button>
-              <button type="button" id="popup-close-btn">Close</button>
-            </div>
-          </form>
-        </div>
-        <!-- End User Form Popup -->
       </div>
     </header>
 
@@ -123,5 +94,6 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>

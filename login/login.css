@@ -1,0 +1,68 @@
+/* Navbar buttons */
+#btn-signin {
+  display: none;
+}
+
+#btn-signout {
+  display: none;
+}
+
+/* Login Form */
+#login-form {
+  width: 70%;
+  background-image: linear-gradient(20deg, #fff, #c4d2db 60%, #fff);
+  border: solid 1px #0a597e;
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 40px;
+}
+
+#btn-submit {
+  color: #6be2f1;
+}
+
+#login-page-btn a {
+  color: #e9c493;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 90%;
+  padding: 10px 15px;
+  margin: 8px auto;
+  display: block;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+#login-form label {
+  width: 90%;
+  margin: 8px auto;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0a597e;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#login-form #error-msg {
+  color: #ff0000;
+  text-align: center;
+  height: 20px;
+  visibility: visible;
+}
+
+#bttns {
+  display: flex;
+  width: 90%;
+  margin: 10px auto 25px;
+  justify-content: space-between;
+}
+
+#bttns button {
+  width: 100px;
+  margin: 8px 0;
+}
