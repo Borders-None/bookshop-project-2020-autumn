@@ -28,8 +28,8 @@ function validate(e) {
     }, 1000);
   } else {
     // store the input into Session Storage
-    sessionStorage.setItem('sessionUsername', usernameValue);
-    sessionStorage.setItem('sessionPassword', passwordValue);
-    window.open('../login/login.html', '_self');
+    sessionStorage.setItem('username', usernameValue);
+    sessionStorage.setItem('password', passwordValue);
+    window.open('../index.html', '_self');
   }
 }

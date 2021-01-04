@@ -1,7 +1,7 @@
 ///////////////////////////////////
 // Session
 // control display of the USER NAME on top of screen
-let storedName = sessionStorage.getItem('sessionUsername');
+let storedName = sessionStorage.getItem('username');
 
 if (storedName) {
   document.getElementById('user-icon').style.visibility = 'visible';
@@ -17,8 +17,8 @@ if (storedName) {
   // Event listener to sign out
   btnSignOut.addEventListener('click', resetUser);
   function resetUser() {
-    sessionStorage.removeItem('sessionUsername');
-    sessionStorage.removeItem('sessionPassword');
+    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('password');
     btnSignOut.style.visibility = 'hidden';
     window.open('../index.html', '_self');
   }
