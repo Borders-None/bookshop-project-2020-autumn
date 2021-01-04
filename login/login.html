@@ -18,8 +18,8 @@
     />
     <!-- Styling -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="book.css" />
-    <title>Book Description :: CWB Books for all!</title>
+    <link rel="stylesheet" href="login.css" />
+    <title>Login :: CWB Books for all!</title>
   </head>
   <body>
     <header>
@@ -34,7 +34,7 @@
             <span id="user-show"></span>
           </div>
           <button id="btn-signin">
-            <a href="../login/login.html"
+            <a href="login/login.html"
               >Sign In <i class="fas fa-sign-in-alt"></i
             ></a>
           </button>
@@ -45,7 +45,23 @@
       </div>
     </header>
 
-    <main class="main-content"></main>
+    <main>
+      <div class="container">
+        <!-- Login Form start -->
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input type="text" placeholder="Enter Username" id="username" />
+
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter Password" id="password" />
+          <div id="error-msg"></div>
+          <div id="bttns">
+            <button type="submit" id="btn-login-submit">Login</button>
+          </div>
+        </form>
+        <!-- Login Form finish -->
+      </div>
+    </main>
 
     <footer>
       <div class="container">
@@ -75,7 +91,7 @@
         </div>
       </div>
     </footer>
+    <script src="login.js"></script>
     <script src="../navbar.js"></script>
-    <script src="book.js"></script>
   </body>
 </html>

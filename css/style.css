@@ -1,40 +1,106 @@
-/* General Styling */
+/* General */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: "Vollkorn", serif;
-  font-weight: 500;
-  font-size: 2em;
-  text-align: left;
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
+
+h1 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 500;
+  align-self: center;
+}
+
 a {
   text-decoration: none;
-  color: black;
 }
 
-/* Header Styling */
+button,
+button:active {
+  background-color: #0a597e;
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
+button:hover,
+button:focus {
+  background-color: #55b1db;
+  color: #000;
+}
+
+/* Header */
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 125px;
+  background-color: #f3f0f0;
+}
+
+header h1 a {
+  color: #0a597e;
 }
 
 header .container {
-  margin: 0 auto;
-  padding: 40px 0;
-  width: 90%;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Banner Styling */
+/* header login */
+
+#login-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-box {
+  margin: 0 10px;
+}
+
+#login-box a {
+  color: #fff;
+}
+
+#user-icon {
+  font-size: 18px;
+  visibility: hidden;
+  color: #0a597e;
+}
+
+#user-show {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #0a597e;
+  visibility: hidden;
+  width: 65%;
+}
+
+#btn-signin {
+  display: block;
+}
+
+#btn-signout {
+  display: none;
+  color: gold;
+}
+
+/* Banner */
 .banner {
   color: #fff;
   position: relative;
@@ -43,13 +109,13 @@ header .container {
 }
 
 .banner::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/banner-image.jpg") no-repeat;
+  background: url('../images/banner-image.jpg') no-repeat;
   background-position-x: center;
   background-size: cover;
   -webkit-filter: brightness(0.7);
@@ -58,7 +124,6 @@ header .container {
 }
 
 .banner .container {
-  margin: 0 0 0 4rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -88,44 +153,12 @@ header .container {
   opacity: 1;
   transition: opacity 1s;
 }
-.banner-text button:focus {
-  outline: none;
-}
 
 .banner-text button:hover {
   opacity: 0.6;
 }
-/* Headers for Books  */
-#book-header {
-  text-align: center;
-  border-bottom: 3px solid black;
-  padding-bottom: 1rem;
-  color: cadetblue;
-}
 
-#btn {
-  background: transparent;
-  height: 40px;
-  font-size: 11px;
-  font-weight: 600;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-  padding: 0 3rem;
-  color: #555;
-  margin: 2rem 0 0 4rem;
-}
-
-#btn:focus {
-  outline: none;
-}
-
-/* Books Styling */
-main {
-  height: 1700px;
-  margin: 3rem 0 0 2rem;
-}
+/* Books  */
 
 .books {
   display: grid;
@@ -133,117 +166,219 @@ main {
   grid-template-rows: repeat(4, 1fr);
   row-gap: 3rem;
   justify-items: center;
-}
-.book {
-  width: 220px;
+  margin: 40px 0 40px;
 }
 
 .book .title {
   font-size: 1em;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 2em;
+  color: #256582;
 }
 
 .book .author {
   font-size: 1.1em;
   font-weight: 400;
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 10px 0 10px;
 }
 
 .book .book-cover {
   height: 300px;
   width: 200px;
-}
-
-.book .btn-details {
-  padding: 10px;
-  background: gray;
-  border: 3px solid saddlebrown;
-  border-radius: 5px;
-  margin: 0.5rem 0 0 0;
-}
-
-.btn-details a {
-  color: white;
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  margin-top: 15px;
 }
 
 /* Footer styling */
 footer {
+  min-height: 250px;
+  background-color: #f3f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .container .organizers {
+  color: #0a597e;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 80px;
+}
+
+footer .organizers li {
+  margin: 5px 0 2px 20px;
+}
+
+footer .bottom-banner {
+  color: #fff;
   height: 50px;
-  background-color: #202020;
-  color: white;
+  width: 100%;
+  background: #0a597e;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.8em;
+}
+
+footer .social {
+  width: 50px;
+  display: flex;
+  margin-left: 25px;
+}
+footer .social a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+footer .social i {
+  margin-left: 10px;
 }
 
 /* Media Queries */
 
 @media (max-width: 1200px) {
-  .banner {
-    height: 200px;
+  .container {
+    width: 90%;
   }
 
-  .banner .container {
-    align-items: flex-start;
+  header {
+    padding: 30px;
   }
+
   .banner .banner-text {
-    margin: 0;
+    margin: 70px 70px 70px 100px;
   }
 
-  main {
-    height: 2500px;
-  }
   .books {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer img {
+    height: min-content;
   }
 }
 
 @media (max-width: 900px) {
-  .banner {
-    height: 200px;
-    margin-bottom: 3rem;
+  header .container {
+    align-items: flex-end;
+  }
+  #login-box {
+    flex-direction: column;
+    width: 30%;
   }
 
-  .banner .banner-text {
-    margin: 0;
-  }
-
-  main {
-    height: 3300px;
-  }
   .books {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 650px) {
-  .banner .container {
-    margin: 0 0 0 1rem;
+  header .container {
+    width: 100%;
   }
 
   .banner-text h1 {
     font-size: 1.5em;
   }
-  main {
-    height: 6500px;
+
+  header .container {
+    width: 100%;
   }
+  header .container h1 {
+    font-size: 1.5em;
+  }
+  header .login {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    height: 60px;
+    padding: 0;
+  }
+
+  #login-form #error-msg {
+    height: 30px;
+  }
+
+  .login button {
+    font-size: 15px;
+  }
+
+  #bttns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #bttns button {
+    width: 100%;
+    margin: 7px 0;
+  }
+
+  footer {
+    min-height: 588px;
+  }
+
+  footer .container .organizers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    margin: 0;
+  }
+  footer .container .organizers img,
+  ul {
+    align-self: center;
+    padding: 25px;
+  }
+  footer .container .organizers img {
+    height: auto;
+  }
+
+  footer .container .organizers ul {
+    align-self: center;
+    width: 220px;
+  }
+}
+@media (max-width: 450px) {
   .books {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media (max-width: 450px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer .icons {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  header .login {
+    width: 100px;
+    font-size: 15px;
+  }
   .banner-text h1 {
     font-size: 1.3em;
     margin-bottom: 15px;
   }
   .banner-text button {
     font-size: 0.7em;
+  }
+  footer .bottom-banner {
+    flex-direction: column-reverse;
+    min-height: 100px;
+  }
+  footer .bottom-banner p,
+  div.social {
+    margin: 15px;
+    margin-left: 0;
   }
 }

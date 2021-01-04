@@ -1,9 +1,9 @@
 // Fetching books on main html page //
-let allBooks = document.querySelector(".books");
+let allBooks = document.querySelector('.books');
 
-window.addEventListener("DOMContentLoaded", getBooks);
+window.addEventListener('DOMContentLoaded', getBooks);
 function getBooks() {
-  fetch("https://bookshop-api.mirkwood.dev/books/")
+  fetch('https://bookshop-api.mirkwood.dev/books/')
     .then(function (re) {
       return re.json();
     })
@@ -16,10 +16,9 @@ function getBooks() {
 }
 
 function displayBooks(data) {
-  let bookDiv = "";
+  let bookDiv = '';
   data.forEach((book) => {
     const title = `<a class = 'title' href= "books/book.html?id=${book.id}">  ${book.title}</a>  `;
-
     const author = `<div class = 'author'> ${book.author.first_name} ${book.author.last_name}</div> `;
     const bookCover = `<img class = 'book-cover' src = ${book.cover_url} >`;
     bookDiv += `<div class='book'> ${title} ${author} ${bookCover}   </div> `;
