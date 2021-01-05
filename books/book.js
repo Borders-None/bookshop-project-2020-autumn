@@ -38,23 +38,31 @@ function displayBook(book) {
   main.innerHTML = currentBook;
 }
 
+var date = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');        //January is 0!
+var yyyy = today.getFullYear();
+
+var Price = document.getElementById("Price").value;
 
 function purchaseBook() {
   const purchase = {
-    total_price: 41,
-    date: "2020-12-13",
+    total_price: [Price],      //get element id
+    date: mm + '/' + dd + '/' + yyyy,     //actual ,today date
     books: [bookId],
 };
+
+sessionStorage.setItem("username", "api-client")         //temp
+sessionStorage.setItem("password", "KEV9EwC5SEvk4dF")    //temp
 const username = sessionStorage.getItem("username")
 const password = sessionStorage.getItem("password")
-
-
+const base64EncodedString = btoa(`${username}:${password}`)
 
   fetch(`https://bookshop-api.mirkwood.dev/purchases/`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json", // A Content-Type header
-      "Authorization": `Basic ${base64EncodedString}`, // <-------- added authorization to the protected purchases endpoint
+      "Content-Type": "application/json",    // A Content-Type header
+      "Authorization": `Basic ${base64EncodedString}`,   // added authorization to the protected purchases endpoint
     },
     body: JSON.stringify(purchase),
   })
@@ -62,8 +70,8 @@ const password = sessionStorage.getItem("password")
       return res.json();
     })
 
-    .then((book) => {
-      displayBook(book);
+    .then((response) => {
+      console.log(response)                           //being sure purchas happened  
     });
 }
 
