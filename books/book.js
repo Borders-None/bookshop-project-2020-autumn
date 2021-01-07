@@ -27,7 +27,7 @@ function displayBook(book) {
   const bookPrice = `<h2> <span id="price">${book.price}</span> € </h2>`;
   const bookPurchaseH3 = `<h3> Free delivery worldwide</h3>`;
   const bookPurchaseP = `  <p> <i class="far fa-check-circle"></i> Available. Dispatched from Australia in 3  business  days. </p>`;
-  const buttonBuy = `<button class= 'buy'> Buy Now </button>`;
+  const buttonBuy = `<button class= 'buy' onclick="purchaseBook()"> Buy Now </button>`;
   const buttonBasket = `<button class = 'basket' > Add to basket </button>`;
   const buttonWish = `<button class = 'wishlist' > Add to wishlist </button>`;
   const bookInfoDiv = `<div class = 'book-info'> ${title} ${author} ${bookYear} ${topic} ${synopsis} </div>`;
@@ -39,24 +39,21 @@ function displayBook(book) {
 }
 
 var date = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0');        //January is 0!
-var yyyy = today.getFullYear();
+var dd = String(date.getDate()).padStart(2, '0');
+var mm = String(date.getMonth() + 1).padStart(2, '0');        //January is 0!
+var yyyy = date.getFullYear();
 
-var Price = document.getElementById("Price").value;
+var price = document.getElementById("price").value;
 
 function purchaseBook() {
   const purchase = {
-    total_price: [Price],      //get element id
-    date: mm + '/' + dd + '/' + yyyy,     //actual ,today date
+    total_price: [price],      //get element id
+    date: "yyyy + '-' + mm + '-' + dd",     //actual ,today date
     books: [bookId],
-};
-
-sessionStorage.setItem("username", "api-client")         //temp
-sessionStorage.setItem("password", "KEV9EwC5SEvk4dF")    //temp
-const username = sessionStorage.getItem("username")
-const password = sessionStorage.getItem("password")
-const base64EncodedString = btoa(`${username}:${password}`)
+  };
+  const username = sessionStorage.getItem("username")
+  const password = sessionStorage.getItem("password")
+  const base64EncodedString = btoa(`${username}:${password}`)
 
   fetch(`https://bookshop-api.mirkwood.dev/purchases/`, {
     method: "POST",
@@ -71,7 +68,7 @@ const base64EncodedString = btoa(`${username}:${password}`)
     })
 
     .then((response) => {
-      console.log(response)                           //being sure purchas happened  
+      console.log(response)                           //being sure purchase happened  
     });
 }
 
