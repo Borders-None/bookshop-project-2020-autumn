@@ -70,6 +70,7 @@
 .book-purchase .buy {
   background-color: cornflowerblue;
   color: white;
+  cursor: pointer;
 }
 .book-purchase .basket {
   background: lightslategray;
