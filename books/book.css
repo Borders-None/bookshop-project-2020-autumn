@@ -1,43 +1,3 @@
-/* General styling */
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-button:focus {
-  outline: none;
-}
-
-/* Header styling  */
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header .container {
-  margin: 0 auto;
-  padding: 40px 0;
-  width: 90%;
-}
-
-header .container h1 {
-  font-family: "Vollkorn", serif;
-  font-weight: 500;
-  font-size: 2em;
-  text-align: left;
-}
-
 /* main-content styling */
 
 .main-content {
@@ -47,14 +7,17 @@ header .container h1 {
 }
 
 .main-content .book {
-  height: 100%;
   width: 90%;
-  margin: auto;
+  margin: 75px auto;
+  padding: 25px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
   background-color: #ededef;
+  box-shadow: 0 1px 16px -5px rgba(0, 0, 0, 0.45);
+  background: #f2f2f2 linear-gradient(to top, #fff 0%, #865100 300%);
 }
+
 .book div {
   margin-top: 1rem;
 }
@@ -75,6 +38,9 @@ header .container h1 {
 }
 .book-info .title {
   color: darkslateblue;
+  font-size: 2em;
+  line-height: 1.5em;
+  margin: 0;
 }
 
 .book-purchase {
@@ -86,9 +52,7 @@ header .container h1 {
 .book-purchase h2 {
   color: cornflowerblue;
 }
-.book-purchase,
-h4,
-p {
+.book-purchase h4 p {
   margin: 1rem 0;
 }
 
@@ -116,16 +80,6 @@ p {
 .book-purchase .wishlist {
   background-color: white;
   color: #876d66;
-}
-
-/* Footer styling */
-footer {
-  height: 50px;
-  background-color: #202020;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Media Queries */
